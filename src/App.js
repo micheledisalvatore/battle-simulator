@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Dice from './components/dice'
+import Bar from './components/bar'
+import Player from './components/player'
+import Monster from './components/monster'
+
+import { H1, GameField, PlayerSide, Dices, BattleField, Score, Attack } from './App.styles'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <H1>Battle simulator</H1>
       </header>
-    </div>
+      <GameField>
+        <PlayerSide>
+          <Player />
+          <Bar level={57} />
+          <Dices>
+            <Dice final={3} />
+            <Dice final={4} />
+          </Dices>
+        </PlayerSide>
+        <BattleField>
+          <Score>You hit for 6!</Score>
+          <Attack type="button">Attack</Attack>
+        </BattleField>
+        <PlayerSide>
+          <Dices>
+            <Dice final={3} />
+            <Dice final={4} />
+          </Dices>
+          <Bar level={57} />
+          <Monster />
+        </PlayerSide>
+      </GameField>
+    </>
   );
 }
 
