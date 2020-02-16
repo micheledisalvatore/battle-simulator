@@ -2,6 +2,8 @@
 
 Check the preview of this project on [netlify](https://gifted-curie-e0a6fe.netlify.com/).
 
+Written one complex test case for App component.
+
 ## Task
 
 You will be coding a simple “Battle Simulator” for an RPG. You should spend around 1-2 hours completing this.
