@@ -23,7 +23,7 @@ const loser = keyframes`
     transform: rotateY(180deg) translateX(0%);
   }
   100% {
-    transform: rotateY(180deg) translateX(100%);
+    transform: rotateY(180deg) translateX(200%);
   }
 `
 
@@ -34,8 +34,10 @@ export const Pacman = styled.div`
   background: #F2D648;
   position: relative;
   ${({ lost }) => lost && css`
-    transform: rotateY(180deg) translateX(100%);
-    animation: ${loser} 3s
+    transform: rotateY(180deg) translateX(200%);
+    animation: ${loser} 3s;
+    opacity: 0;
+    transition: opacity 0s 2.5s;
   `}
 `
 

@@ -5,15 +5,18 @@ const loser = keyframes`
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 `
 
 export const Svg = styled.svg`
   fill:${({ lost }) => lost ? 'blue' : 'red'};
+  height: 50%;
 
   ${({ lost }) => lost && css`
-    transform: translateX(100%);
-    animation: ${loser} 3s
+    transform: translateX(200%);
+    animation: ${loser} 3s;
+    opacity: 0;
+    transition: opacity 0s 2.5s;
   `}
 `

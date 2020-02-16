@@ -27,7 +27,8 @@ export const initialState = {
 
 export const battleReducer = (state, action) => {
   let newState = state
-  if(action.type === 'completeAttack') {
+
+  if (action.type === 'completeAttack') {
     const dice1 = generateDiceValue()
     const dice2 = generateDiceValue()
     const dice3 = generateDiceValue()

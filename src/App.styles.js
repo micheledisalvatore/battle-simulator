@@ -6,15 +6,31 @@ export const H1 = styled.h1`
 
 export const GameField = styled.div`
   display: flex;
-  justify-content: space-between;
-  height: 200px;
+  justify-content: space-evenly;
+  height: 400px;
+  flex-direction: column;
+
+  @media only screen and (min-width: 480px) {
+    height: 200px;
+    flex-direction: row;
+  }
 `
 
 export const PlayerSide = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-grow: 0.5;
   align-items: center;
+  height: 100%;
+  overflow: hidden;
+`
+
+export const MonsterSide = styled(PlayerSide)`
+  flex-direction: row-reverse;
+
+  @media only screen and (min-width: 480px) {
+    flex-direction: row;
+  }
 `
 
 export const Dices = styled.div`
@@ -29,11 +45,15 @@ export const BattleField = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  flex-grow: 2;
+  flex-grow: 1;
+  flex-basis: 200px;
   position: relative;
 `
 
-export const Score = styled.h2``
+export const Score = styled.h2`
+  height: 2.4rem;
+  font-size: 2rem;
+`
 
 export const Attack = styled.button`
   padding: 0.5rem;
@@ -47,7 +67,7 @@ const increaseFont = keyframes`
     font-size: 1vw;
   }
   100% {
-    font-size: 5vw;
+    font-size: 15vw;
   }
 `
 
@@ -60,10 +80,9 @@ export const GameOver = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
   background: white;
   transform: translate(-50%, -50%);
-  font-size: 5vw;
+  font-size: 15vw;
   color: ${({ winner }) => winner ? 'green' : 'red'};
-  animation: ${increaseFont} 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: ${increaseFont} 2s cubic-bezier(0.60, -0.55, 0.27, 1.70);
 `

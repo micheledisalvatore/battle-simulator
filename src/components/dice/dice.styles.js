@@ -36,13 +36,14 @@ const six = `url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/s
 <path d='M149.333 170.667C172.907 170.667 192 151.573 192 128s-19.093-42.667-42.667-42.667c-23.573 0-42.667 19.093-42.667 42.667.001 23.573 19.094 42.667 42.667 42.667zM149.333 298.667C172.907 298.667 192 279.573 192 256s-19.093-42.667-42.667-42.667c-23.573 0-42.667 19.093-42.667 42.667s19.094 42.667 42.667 42.667zM149.333 426.667C172.907 426.667 192 407.573 192 384s-19.093-42.667-42.667-42.667c-23.573 0-42.667 19.093-42.667 42.667.001 23.573 19.094 42.667 42.667 42.667zM362.667 170.667c23.573 0 42.667-19.093 42.667-42.667 0-23.573-19.093-42.667-42.667-42.667S320 104.427 320 128s19.093 42.667 42.667 42.667zM362.667 298.667c23.573 0 42.667-19.093 42.667-42.667s-19.093-42.667-42.667-42.667S320 232.427 320 256s19.093 42.667 42.667 42.667zM362.667 426.667c23.573 0 42.667-19.093 42.667-42.667 0-23.573-19.093-42.667-42.667-42.667S320 360.427 320 384s19.093 42.667 42.667 42.667z'/>
 </svg>")`
 
-const rolling = keyframes`
+const rollingDice = keyframes`
   0% {content:${four};}
   16% {content:${six};}
   33% {content:${three};}
   49% {content:${one};}
   66% {content:${five};}
   83% {content:${two};}
+  100% {content:${four};}
 `;
 
 export const Fixed = styled.div`
@@ -61,7 +62,9 @@ export const Fixed = styled.div`
 
 export const Rolling = styled(Fixed)`
   &::before {
-    content: ${three};
-    animation: ${rolling} 0.3s linear infinite;
+    background-image:url("/rolling-dice.gif");
+    background-size: 100% 100%;
+    content: '';
+    animation: ${rollingDice} 0.3s linear infinite;
   }
 `
