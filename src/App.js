@@ -61,7 +61,7 @@ const App = () => {
             <GameOver winner={state.player.score > 0}>{state.player.score > 0 ? 'You win' : 'Game over'}</GameOver>
           )}
         </Score>
-        <Attack type="button" onClick={handleAttach}>Attack</Attack>
+        <Attack type="button" onClick={handleAttach} data-testid="attack-button">Attack</Attack>
       </BattleField>
     </>
   );

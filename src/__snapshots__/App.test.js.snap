@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component after 2 attacks 1`] = `
+<div>
+  <header>
+    <h1
+      class="sc-AxjAm jWlVxK"
+    >
+      Battle simulator
+    </h1>
+  </header>
+  <div
+    class="sc-AxirZ bVCxIE"
+  >
+    <div
+      class="sc-AxiKw cMaQPn"
+    >
+      <div
+        data-lost="false"
+        data-testid="player"
+      />
+      <div
+        data-last="4"
+        data-level="92"
+        data-testid="bar"
+      />
+      <div
+        class="sc-AxhUy bVNnww"
+      >
+        <div
+          data-final="1"
+          data-is-in-progress="false"
+          data-testid="dice"
+        />
+        <div
+          data-final="2"
+          data-is-in-progress="false"
+          data-testid="dice"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-AxiKw sc-AxhCb ibPXJs"
+    >
+      <div
+        class="sc-AxhUy bVNnww"
+      >
+        <div
+          data-final="3"
+          data-is-in-progress="false"
+          data-testid="dice"
+        />
+        <div
+          data-final="4"
+          data-is-in-progress="false"
+          data-testid="dice"
+        />
+      </div>
+      <div
+        data-last="0"
+        data-level="100"
+        data-testid="bar"
+      />
+      <div
+        data-lost="false"
+        data-testid="monster"
+      />
+    </div>
+  </div>
+  <div
+    class="sc-AxgMl cbTHOa"
+  >
+    <h2
+      class="sc-AxheI hIhWkz"
+    >
+      Monster hits for 4!
+    </h2>
+    <button
+      class="sc-Axmtr igOteH"
+      data-testid="attack-button"
+      type="button"
+    >
+      Attack
+    </button>
+  </div>
+</div>
+`;
