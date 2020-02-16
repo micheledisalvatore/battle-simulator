@@ -1,21 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-
-// @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
-// *, *:after, *:before {
-//   box-sizing: border-box;
-// }
-
-// body {
-//   background: #000;
-//   color: #fff;
-//   padding: 0;
-//   margin: 0;
-//   font-family: 'Slabo 27px', serif;
-//   display: flex;
-//   height: 100vh;
-//   justify-content: center;
-//   align-items: center;
-// }
+import styled, { keyframes, css } from 'styled-components'
 
 const eat = keyframes`
   0% {
@@ -35,13 +18,25 @@ const eat = keyframes`
   }
 `
 
+const loser = keyframes`
+  0% {
+    transform: rotateY(180deg) translateX(0%);
+  }
+  100% {
+    transform: rotateY(180deg) translateX(100%);
+  }
+`
+
 export const Pacman = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background: #F2D648;
   position: relative;
-  margin-top: 20px;
+  ${({ lost }) => lost && css`
+    transform: rotateY(180deg) translateX(100%);
+    animation: ${loser} 3s
+  `}
 `
 
 export const Eye = styled.div`

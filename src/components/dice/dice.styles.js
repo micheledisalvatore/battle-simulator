@@ -45,7 +45,7 @@ const rolling = keyframes`
   83% {content:${two};}
 `;
 
-export const Main = styled.div`
+export const Fixed = styled.div`
   &::before {
     ${({final}) => final === 1 && css`content:${one};`}
     ${({final}) => final === 2 && css`content:${two};`}
@@ -53,8 +53,15 @@ export const Main = styled.div`
     ${({final}) => final === 4 && css`content:${four};`}
     ${({final}) => final === 5 && css`content:${five};`}
     ${({final}) => final === 6 && css`content:${six};`}
-    animation: ${rolling} 0.3s linear 6;
     display:block;
     width:50px;
+    height:50px;
+  }
+`
+
+export const Rolling = styled(Fixed)`
+  &::before {
+    content: ${three};
+    animation: ${rolling} 0.3s linear infinite;
   }
 `
