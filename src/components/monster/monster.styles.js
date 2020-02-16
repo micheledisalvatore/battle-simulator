@@ -11,7 +11,8 @@ const loser = keyframes`
 
 export const Svg = styled.svg`
   fill:${({ lost }) => lost ? 'blue' : 'red'};
-  height: 50%;
+  height: 100px;
+  width: 100px;
 
   ${({ lost }) => lost && css`
     transform: translateX(200%);
